@@ -21,4 +21,5 @@ This repository contains a [Substrate](https://github.com/paritytech/substrate) 
 
 If you want to help either join our **[discord server](https://discord.gg/VMj7PFN)** or you can open issues. You can also submit pull requests to this repository.
 
-**-> [Next: 1. Introduction](./tutorial/1_introduction.md)**
+---
+**-> [Start: 1. Introduction](./tutorial/1_introduction.md)**
