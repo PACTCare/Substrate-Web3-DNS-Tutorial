@@ -1,0 +1,6 @@
+{
+    "Metalog": {
+        "did": "Vec<u8>",
+        "unique_name": "Vec<u8>"
+    }
+}
