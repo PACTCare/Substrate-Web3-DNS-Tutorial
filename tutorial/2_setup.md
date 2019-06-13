@@ -29,7 +29,7 @@ All that is left to do is to finally start your own blockchain:
 
 After this you might need to agree to the firewall settings and you should see something similiar to the following image:
 
-<img src="./images/setup_1.png" width="600px">
+<img src="./images/setup_1.png" width="800px">
 
 ---
 **-> [Next: 3. Interface](./3_interface.md)**

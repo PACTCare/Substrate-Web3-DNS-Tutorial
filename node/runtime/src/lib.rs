@@ -300,6 +300,7 @@ impl_runtime_apis! {
         }
     }
 
+    // Needs to be commended out for tests
     impl consensus_authorities::AuthoritiesApi<Block> for Runtime {
         fn authorities() -> Vec<AuthorityId> {
             Consensus::authorities()

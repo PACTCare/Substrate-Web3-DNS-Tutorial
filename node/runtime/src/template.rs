@@ -25,7 +25,6 @@ pub struct Metalog {
     pub unique_name: Vec<u8>,
 }
 
-/// This module's storage items.
 decl_storage! {
     trait Store for Module<T: Trait> as TemplateModule {
         /// Query for unique names
@@ -110,7 +109,7 @@ mod tests {
         traits::{BlakeTwo256, IdentityLookup},
         BuildStorage,
     };
-    use support::{assert_ok, impl_outer_origin};
+    use support::{assert_noop, assert_ok, impl_outer_origin};
 
     impl_outer_origin! {
         pub enum Origin for Test {}
@@ -150,13 +149,38 @@ mod tests {
     }
 
     #[test]
-    fn it_works_for_default_value() {
+    fn create_metalog_works() {
         with_externalities(&mut new_test_ext(), || {
-            // Just a dummy test for the dummy funtion `do_something`
-            // calling the `do_something` function with a value 42
-            assert_ok!(TemplateModule::do_something(Origin::signed(1), 42));
-            // asserting that the stored value is equal to what we stored
-            assert_eq!(TemplateModule::something(), Some(42));
+            let did = vec![1, 2];
+            let un = vec![1];
+            let mut did_too_long = did.clone();
+            let mut un_too_long = un.clone();
+            for _i in 1..100 {
+                did_too_long.push(2);
+                un_too_long.push(1);
+            }
+            assert_noop!(
+                TemplateModule::create_metalog(
+                    Origin::signed(20),
+                    did_too_long.clone(),
+                    un.clone()
+                ),
+                ERR_BYTEARRAY_LIMIT_DID
+            );
+            assert_noop!(
+                TemplateModule::create_metalog(
+                    Origin::signed(20),
+                    did.clone(),
+                    un_too_long.clone()
+                ),
+                ERR_BYTEARRAY_LIMIT_NAME
+            );
+            assert_ok!(TemplateModule::create_metalog(
+                Origin::signed(20),
+                did.clone(),
+                un.clone()
+            ));
+            assert_eq!(TemplateModule::owner_of_did(did), Some(20));
         });
     }
 }
