@@ -65,6 +65,4 @@ If everything works correctly you should see something similar to the following 
 
 <img src="./images/tests_1.png" width="600px">
 
----
-\
 **-> [Next: 7. UI](./7_ui.md)**

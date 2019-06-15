@@ -24,6 +24,4 @@ And don’t worry if you never used Rust before. If you programmed before, you s
 
 In case you want to skip the tutorial or simply check certain things, you can find the completed runtime module in the node folder of this repository.
 
----
-\
 **-> [Next: 2. Setup](./2_setup.md)**

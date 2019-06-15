@@ -4,14 +4,14 @@ This repository contains a [Substrate](https://github.com/paritytech/substrate) 
 
 ## Table of Contents
 
-* [1. Introduction](./tutorial/1_introduction.md)
-* [2. Setup](./tutorial/2_setup.md)
-* [3. Interface](./tutorial/3_interface.md)
-* [4. Runtime](./tutorial/4_runtime.md)
-* [5. Testing](./tutorial/5_testing.md)
-* [6. Writing Tests](./tutorial/6_tests.md)
-* [7. UI](./tutorial/7_ui.md)
-* [8. Next Steps](./tutorial/8_next_steps.md)
+1. [Introduction](./tutorial/1_introduction.md)
+2. [Setup](./tutorial/2_setup.md)
+3. [Interface](./tutorial/3_interface.md)
+4. [Runtime](./tutorial/4_runtime.md)
+5. [Testing](./tutorial/5_testing.md)
+6. [Writing Tests](./tutorial/6_tests.md)
+7. [UI](./tutorial/7_ui.md)
+8. [Next Steps](./tutorial/8_next_steps.md)
 
 ## Maintainer
 
@@ -21,6 +21,4 @@ This repository contains a [Substrate](https://github.com/paritytech/substrate) 
 
 If you want to help either join our **[discord server](https://discord.gg/VMj7PFN)** or you can open issues. You can also submit pull requests to this repository.
 
----
-\
 **-> [Open Tutorial Website](https://pactcare.github.io/Substrate-Web3-DNS-Tutorial/tutorial/1_introduction.html)**

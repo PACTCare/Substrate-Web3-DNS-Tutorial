@@ -31,6 +31,4 @@ After this you might need to agree to the firewall settings and you should see s
 
 <img src="./images/setup_1.png" width="800px">
 
----
-\
 **-> [Next: 3. Interface](./3_interface.md)**
