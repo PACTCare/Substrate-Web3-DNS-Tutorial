@@ -117,4 +117,5 @@ where
 Obviously, the runtime module is only a starting point for a Web3 Domain Name/Metadata System. You probably want to at least at functions to update the entry as well as at the smart contract module, so that people can create additional services on top of your blockchain, like for example marketplaces. Feel free to take a look at [Stars Network Whitepaper](https://github.com/PACTCare/Stars-Network/blob/master/WHITEPAPER.md) and specifically the [Starlog runtime](https://github.com/PACTCare/Starlog).
 
 ---
+
 **-> [Next: 5. Testing](./5_testing.md)**
