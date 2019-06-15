@@ -27,7 +27,9 @@ DID stands for [decentralized identifier](https://w3c-ccg.github.io/did-spec/) a
 use parity_codec::{Encode, Decode};
 use rstd::vec::Vec;
 ```
-The import of rstd::vec::Vec is necessary to support byte vectors, which will essentially be used to handle strings in the module. We probably also want to map the individual domains names to specific accounts instead of storing them across all accounts. That’s why we replace the StorageValue import with the StorageMap import. Additionally, we add the ensure trait. This is used to test certain requirements before the variable is stored. It’s very important to always stick to the pattern "Verify First, Write Last", because your Runtime should never panic and also be safe against potential attacks.   
+The import of rstd::vec::Vec is necessary to support byte vectors, which will essentially be used to handle strings in the module. 
+
+We probably also want to map the individual domains names to specific accounts instead of storing them across all accounts. That’s why we replace the StorageValue import with the StorageMap import. Additionally, we add the ensure trait. This is used to test certain requirements before the variable is stored. 
 ```
 use support::{decl_module, decl_storage, decl_event, ensure, StorageMap, dispatch::Result};
 ```
@@ -42,7 +44,7 @@ trait Store for Module<T: Trait> as TemplateModule {
     DidMeta get(meta_of_did): map Vec<u8> => Metalog;
     DidOwner get(owner_of_did): map Vec<u8> => Option<T::AccountId>;
 
-    /// Array of personal owned Metalog data
+    /// Personal owned Metalog data referenced by number
     OwnedMetaArray get(metadata_of_owner_by_index): map (T::AccountId, u64) => Metalog;
 
     /// Number of stored Metalogs per account
@@ -52,7 +54,7 @@ trait Store for Module<T: Trait> as TemplateModule {
     OwnedMetaIndex: map Vec<u8> => u64;
 }    
 ```
-Especially the last three elements are interesting since they basically represent an array. This enables every user to own multiple metalog entries. 
+Especially the last three elements are interesting since they basically represent an array based on the combination of tuples and maps. This enables every user to own multiple metalog entries. 
 
 ## Function
 Now, we actually going to implement a function to create a metalog entry. Therefore we put the following function inside “pub struct Module<T: Trait> for enum Call where origin: T::Origin {“.
@@ -62,10 +64,8 @@ fn create_metalog(
     origin,
     did: Vec<u8>,
     unique_name: Vec<u8>) -> Result {
-
-    let sender = ensure_signed(origin)?;
-
     // Verify
+    let sender = ensure_signed(origin)?;
     ensure!(did.len() <= BYTEARRAY_LIMIT_DID, ERR_BYTEARRAY_LIMIT_DID);
     ensure!(unique_name.len() <= BYTEARRAY_LIMIT_NAME, ERR_BYTEARRAY_LIMIT_NAME);
     ensure!(!<DidOwner<T>>::exists(&did), ERR_DID_ALREADY_CLAIMED);
@@ -92,6 +92,15 @@ fn create_metalog(
     Ok(())
 }
 ```
+It’s very important to always stick to the pattern **"Verify First, Store Last"**, because your Runtime should never panic and also be safe against potential attacks. Panics can completely destroy you blockchain storage. That’s why at the beginning of the function we use multiple ensure! checks. Typical verifications are:
+
+* Verifying Signed Messages
+* Overflows/Underflows Checks
+* Collision Checks
+* Storage Limit
+
+After the checks we store the values. 
+
 ## Events
 
 You might have noticed that at the end of the above function we already implemented a call to our event. This ensures that we tell the world that the function executed successfully. So all that is left to do is to declare the actual event in the decl_event! module. 

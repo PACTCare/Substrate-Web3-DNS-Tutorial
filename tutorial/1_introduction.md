@@ -2,7 +2,7 @@
 
 The goal of the tutorial is to show you how you can easily build your own blockchain. Therefore, we’ll use [Substrate](https://github.com/paritytech/substrate), an open source Rust Blockchain Development Kit by Parity. The goal of the tutorial is to create a simple domain name runtime module for the next generation of web. 
 
-A runtime is the block execution logic of the blockchain and consists of different runtime modules. A runtime module typically consists of storage items, functions, and events to enable a certain set of features. The following are the modules that ship with the Substrate Runtime Module Library (SRML).
+A runtime is the block execution logic of the blockchain and consists of different runtime modules. A module typically consists of storage items, functions, and events to enable a certain set of features. The following are the modules that ship with the Substrate Runtime Module Library (SRML).
 
 * [Assets](https://crates.parity.io/srml_assets/index.html) 
 * [Aura](https://crates.parity.io/srml_aura/index.html)  

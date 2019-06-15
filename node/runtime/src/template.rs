@@ -35,7 +35,7 @@ decl_storage! {
         DidMeta get(meta_of_did): map Vec<u8> => Metalog;
         DidOwner get(owner_of_did): map Vec<u8> => Option<T::AccountId>;
 
-        /// Array of personal owned Metalog data
+        /// Personal owned Metalog data referenced by number
         OwnedMetaArray get(metadata_of_owner_by_index): map (T::AccountId, u64) => Metalog;
 
         /// Number of stored Metalogs per account
@@ -56,10 +56,8 @@ decl_module! {
 			origin,
 			did: Vec<u8>,
 			unique_name: Vec<u8>) -> Result {
-
-			let sender = ensure_signed(origin)?;
-
 			// Verify
+			let sender = ensure_signed(origin)?;
 			ensure!(did.len() <= BYTEARRAY_LIMIT_DID, ERR_BYTEARRAY_LIMIT_DID);
 			ensure!(unique_name.len() <= BYTEARRAY_LIMIT_NAME, ERR_BYTEARRAY_LIMIT_NAME);
 			ensure!(!<DidOwner<T>>::exists(&did), ERR_DID_ALREADY_CLAIMED);
