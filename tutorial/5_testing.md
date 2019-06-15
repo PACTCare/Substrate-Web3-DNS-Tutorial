@@ -41,5 +41,5 @@ Next, you can open the chain state tab and query the different storage parts. Yo
 <img src="./images/testing_4.png" width="600px">
 
 ---
-
+\
 **-> [Next: 6. Writing Tests](./6_tests.md)**
