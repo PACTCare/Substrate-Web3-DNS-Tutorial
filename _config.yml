@@ -1,7 +1,5 @@
 title: null
 name: Substrate Web3 DNS Tutorial
-use_logo: true
-logo: https://pact.online/dist/img/starlog_new.png
 
 plugins:
   - jekyll-titles-from-headings
