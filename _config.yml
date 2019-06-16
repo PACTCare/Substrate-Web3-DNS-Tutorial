@@ -9,4 +9,4 @@ titles_from_headings:
   strip_title: true
   collections: true 
 
-exclude: ["README.md"]
+# exclude: ["README.md"]
