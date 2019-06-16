@@ -1,5 +1,7 @@
-title: Substrate Web3 DNS Tutorial
-theme: minima
+title: null
+name: Substrate Web3 DNS Tutorial
+use_logo: true
+logo: https://pact.online/dist/img/starlog_new.png
 
 plugins:
   - jekyll-titles-from-headings
@@ -9,4 +11,4 @@ titles_from_headings:
   strip_title: true
   collections: true 
 
-# exclude: ["README.md"]
+exclude: ["README.md"]
