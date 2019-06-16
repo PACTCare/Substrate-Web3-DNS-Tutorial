@@ -1,6 +1,7 @@
 # name: Substrate Web3 DNS Tutorial
 title: Substrate Web3 DNS Tutorial
 url: "https://pactcare.github.io/Substrate-Web3-DNS-Tutorial/tutorial/1_introduction.html"
+baseurl: "https://pactcare.github.io/Substrate-Web3-DNS-Tutorial/tutorial/1_introduction.html"
 theme: minima
 
 plugins:
