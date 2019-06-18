@@ -23,7 +23,7 @@ You can do this by clicking on the settings tab and then selecting the horizonta
 
 <img src="./images/testing_1.png" width="600px">
 
-Next, let's head to the extrinsic tab. Select the name of your runtime module and then select the createMetalog method. Make sure you have also selected an account which can pay the transaction fee, which should usually be Alice. Next post the following text in both fields:
+Next, let's head to the extrinsic tab. Select the name of your runtime module and then select the createMetalog method. Make sure you have also selected an account which can pay the transaction fee, which should usually be Alice. Next, post the following text in both fields:
 
 ```
 0x48656c6c6f20576f726c64
@@ -32,7 +32,7 @@ This stands for “Hello World” and is based on ["Simple Concatenated Aggregat
 
 <img src="./images/testing_2.png" width="600px">
 
-If you try to send the exact same transaction again, you should see a red event popping up, and in the terminal, you should see the following error message. 
+If you try to send the exact same transaction again, you should see a red event popping up and, in the terminal, you should see the following error message. 
 
 <img src="./images/testing_3.png" width="400px">
 
