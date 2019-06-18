@@ -22,7 +22,7 @@ Now, we'll install the packages to interact with our substrate runtime:
 npm i @polkadot/api@0.82.0-beta.9
 npm i @polkadot/keyring@0.94.0-beta.3
 ```
-And import these packages at the top of our js file as well as define two constants. The constant represents the WebSocket endpoint. 
+and import these packages at the top of our js file as well as define two constants. The constant represents the WebSocket endpoint. 
 ```
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { Keyring } from '@polkadot/keyring';
@@ -55,7 +55,7 @@ This function automatically connects to our runtime, registers our custom type, 
 ```
 npm run build
 ```
-Next you can open the index.html file in your browser and open the developer console. At the top, you should see “connect…” and, if you type for example "substrateApi.tx.", you should now be able to select the different modules of your runtime (see the image below). 
+Next, you can open the index.html file in your browser and open the developer console. At the top, you should see “connect…” and, if you type for example "substrateApi.tx.", you should now be able to select the different modules of your runtime (see the image below). 
 
 <img src="./images/ui_1.png" width="600px">
 
