@@ -103,7 +103,7 @@ After the checks we'll store the values.
 
 ## Events
 
-You might have noticed that at the end of the above function we implemented a call to our event. This ensures that we'll tell the world that the function executed successfully. Now, all that is left to do is to declare the actual event in the decl_event! module. 
+You might have noticed that at the end of the above function we implemented a call to our event. This ensures that we tell the world that the function executed successfully. Now, all that is left to do is to declare the actual event in the decl_event! module. 
 
 ```
 pub enum Event<T>
@@ -114,7 +114,7 @@ where
     }
 ```
 
-Obviously, the runtime module is only a starting point for a Web3 Domain Name/Metadata System. You'll probably want to at least at functions to update the entry as well as at the smart contract module, so that people can create additional services on top of your blockchain, such as marketplaces. Feel free to take a look at [Stars Network Whitepaper](https://github.com/PACTCare/Stars-Network/blob/master/WHITEPAPER.md) and specifically at the [Starlog runtime](https://github.com/PACTCare/Starlog).
+Obviously, the runtime module is only a starting point for a Web3 Domain Name/Metadata System. You'll probably want to at least at functions to update the entry as well as at the smart contract module, so that people can create additional services on top of your blockchain, such as marketplaces. Feel free to take a look at the [Stars Network Whitepaper](https://github.com/PACTCare/Stars-Network/blob/master/WHITEPAPER.md) and specifically at the [Starlog runtime](https://github.com/PACTCare/Starlog).
 
 
 **-> [Next: 5. Testing](./5_testing.md)**
