@@ -1,6 +1,6 @@
 # 3. Interface
 
-Parity provides a nice graphical interface to interact with your blockchain, which doesn’t require you to code your own interface immediately.  It’s the [Polkadot JS UI for Substrate]( https://polkadot.js.org/apps/), which only works in [Chrome](https://www.google.com/chrome/) or an a Chromium-based browser. 
+Parity provides a nice graphical interface to interact with your blockchain, which doesn’t require you to code your own interface immediately.  It’s the [Polkadot JS UI for Substrate]( https://polkadot.js.org/apps/), which only works in [Chrome](https://www.google.com/chrome/) or on a Chromium-based browser. 
 
 With your blockchain running in the console, you can open the website. Make sure to select the settings tab. On this tab, chose Local Node (127.0.0.1:9944) as well as Substrate as your interface, as shown in the image below.
 
