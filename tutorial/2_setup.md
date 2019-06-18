@@ -6,14 +6,14 @@ First, you need to install Rust and its additional dependencies, which might tak
 curl https://getsubstrate.io -sSf | bash -s -- --fast
 ```
 
-If you are on Windows you'll probably want to install a Bash shell, as well as take a look at the following [instructions](https://github.com/paritytech/substrate#612-windows).  
+If you are using Windows you'll probably want to install a Bash shell, as well as take a look at the following [instructions](https://github.com/paritytech/substrate#612-windows).  
 When everything is ready, you might want to restart your terminal. Once this is done, you can create your own node template folder by running:
 
 ```bash
 substrate-node-new <project_name> <your_name>
 ```
 
-Now, make sure you switch to this folder. If you want to run your blockchain, you always need to compile your Wasm image first and then you build the executable. Additionally, you'll probably want to clean the cache of your previous run.
+Now, make sure you switch to this folder. If you want to run your blockchain, you'll always need to compile your Wasm image first and then you can build the executable. Additionally, you'll probably want to clean the cache of your previous run.
 
 ```bash
 ./scripts/build.sh               
