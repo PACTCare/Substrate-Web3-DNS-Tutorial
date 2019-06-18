@@ -1,6 +1,6 @@
 # 4. Runtime
 
-Let’s now start creating your own runtime module. All runtime modules are registered in the [lib.rs file]( ../node/runtime/src/lib.rs). You'll also find in this file the registration of some of the previously mentioned runtime modules, like Consensus or Balances. If you want, you can change the default modules or integrate other modules from the Substrate Runtime Module Library (SRML). But for now, let’s leave everything like it is and just add an additional module. 
+Let’s now start creating your own runtime module. All runtime modules are registered in the [lib.rs file]( ../node/runtime/src/lib.rs). You'll also find in this file the registration of some of the previously mentioned runtime modules, like Consensus or Balances. If you want, you can change the default modules or integrate other modules from the Substrate Runtime Module Library (SRML). But for now, let’s leave everything as it is and just add an additional module. 
 
 Luckily, the [lib.rs file]( ../node/runtime/src/lib.rs) and the folder already contain a [template.rs file]( ../node/runtime/src/template.rs) which we can use. If you want, you can change the name of the file. If you do this, make sure you also change the three appearances of this file inside [lib.rs file]( ../node/runtime/src/lib.rs), which are:
 
