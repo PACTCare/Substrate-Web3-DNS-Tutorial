@@ -9,7 +9,7 @@ cargo build --release
 ./target/release/<project_name>  --dev
 ```
 
-Once the blockchain is running open the [Polkadot JS UI for Substrate](https://polkadot.js.org/apps/) in your Chromium-based browser again. The first thing you need to do is to register the following custom struct with a JSON file or by copy pasting it: 
+Once the blockchain is running, open the [Polkadot JS UI for Substrate](https://polkadot.js.org/apps/) in your Chromium-based browser again. The first thing you'll need to do is to register the following custom struct with a JSON file or by copy pasting it: 
 
 ```
 {
@@ -23,12 +23,12 @@ You can do this by clicking on the settings tab and then selecting the horizonta
 
 <img src="./images/testing_1.png" width="600px">
 
-Next, let's head to the extrinsic tab. Select the name of your runtime module and then select the createMetalog method. Make sure you also have selected an account which can pay the transaction fee, which usually should be Alice. Next post the following text in both fields:
+Next, let's head to the extrinsic tab. Select the name of your runtime module and then select the createMetalog method. Make sure you have also selected an account which can pay the transaction fee, which should usually be Alice. Next post the following text in both fields:
 
 ```
 0x48656c6c6f20576f726c64
 ```
-This stands for “Hello World” and is based on "Simple Concatenated Aggregate Little-Endian" (SCALE) encoding. This stands for “Hello World” and is based on ["Simple Concatenated Aggregate Little-Endian" (SCALE)](https://substrate.dev/docs/en/overview/low-level-data-format) encoding. You now should be able to “Sign and Submit” the transaction and on the right side of your screen, you should see the events popping up. 
+This stands for “Hello World” and is based on ["Simple Concatenated Aggregate Little-Endian" (SCALE)](https://substrate.dev/docs/en/overview/low-level-data-format) encoding. You should now be able to “Sign and Submit” the transaction and ,on the right side of your screen, you should see the events popping up. 
 
 <img src="./images/testing_2.png" width="600px">
 
@@ -36,7 +36,7 @@ If you try to send the exact same transaction again, you should see a red event 
 
 <img src="./images/testing_3.png" width="400px">
 
-Next, you can open the chain state tab and query the different storage parts. You open the storage by pressing the blue plus button on the right side. The image below shows an example query of the DID. 
+Next, you can open the chain state tab and query the different storage parts. You can open the storage by pressing the blue plus button on the right side. The image below shows an example query of the DID. 
 
 <img src="./images/testing_4.png" width="600px">
 
