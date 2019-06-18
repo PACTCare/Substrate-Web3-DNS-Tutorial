@@ -77,4 +77,6 @@ At the beginning of the function, we read the content of the two input fields. N
 
 <img src="./images/ui_2.png" width="400px">
 
+You can easily test if everything works by sending the same transaction twice. In this case you should see an error message inside your runtime terminal.
+
 **-> [Next: 8. Next Steps](./8_next_steps.md)**
