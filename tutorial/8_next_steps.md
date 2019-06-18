@@ -1,6 +1,6 @@
 # 8. Next Steps
 
-This tutorial only gave you a first introduction into Substrate and what you can do with it.  The following resource help you to get a better understanding of the technology:
+This tutorial will only give you a first introduction into Substrate and to what you can do with it. The following resources will help you to get a better understanding of the technology:
 
 **Tutorials:**
 
