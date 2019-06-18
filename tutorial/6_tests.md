@@ -1,6 +1,6 @@
 # 6. Writing Tests
 
-In this section, we will start writing unit tests for our runtime. Luckily the template file also contains a basic test setup at the bottom of [template.rs file]( ../node/runtime/src/template.rs). At the beginning, inside mod tests, there are a lot of imports which will help us to create a mock runtime. Here we are going to add the “,assert_noop” import after assert_ok. 
+In this section, we will start writing unit tests for our runtime. Luckily the template file also contains a basic test setup at the bottom of [template.rs file]( ../node/runtime/src/template.rs). At the beginning, inside mod tests, there are a lot of imports which will help us to create a mock runtime. Here, we are going to add the “assert_noop” import after assert_ok. 
 The actual testing function is at the very end and should look like this:
 ```
 #[test]
