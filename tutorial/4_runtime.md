@@ -92,7 +92,7 @@ fn create_metalog(
     Ok(())
 }
 ```
-It’s very important to always stick to the pattern **"Verify First, Store Last"**, as your Runtime should never panic and should also be safe against potential attacks. Panics can completely destroy your blockchain storage. That’s why at the beginning of the function we'll use multiple ensure! checks. Typical verifications are:
+It’s very important to always stick to the pattern **"Verify First, Store Last"**, as your Runtime should never panic and should also be safe against potential attacks. Panics can completely destroy your blockchain storage. That’s why, at the beginning of the function, we'll use multiple ensure! checks. Typical verifications are:
 
 * Verifying Signed Messages
 * Overflows/Underflows Checks
