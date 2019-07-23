@@ -26,7 +26,6 @@ and import these packages at the top of our js file as well as define two consta
 ```
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { Keyring } from '@polkadot/keyring';
-import { stringToU8a } from '@polkadot/util';
 
 const provider = new WsProvider('ws://127.0.0.1:9944');
 ```
