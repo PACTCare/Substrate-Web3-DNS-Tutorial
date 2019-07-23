@@ -28,7 +28,7 @@ Next, let's head to the extrinsic tab. Select the name of your runtime module an
 ```
 0x48656c6c6f20576f726c64
 ```
-This stands for “Hello World” and is based on ["Simple Concatenated Aggregate Little-Endian" (SCALE)](https://substrate.dev/docs/en/overview/low-level-data-format) encoding. You should now be able to “Sign and Submit” the transaction and ,on the right side of your screen, you should see the events popping up. 
+This stands for “Hello World” and is based on ["Simple Concatenated Aggregate Little-Endian" (SCALE)](https://substrate.dev/docs/en/overview/low-level-data-format) encoding. You should now be able to “Sign and Submit” the transaction and on the right side of your screen, you should see the events popping up. 
 
 <img src="./images/testing_2.png" width="600px">
 
@@ -40,4 +40,4 @@ Next, you can open the chain state tab and query the different storage parts. Yo
 
 <img src="./images/testing_4.png" width="600px">
 
-**-> [Next: 6. Writing Tests](./6_tests.md)**
+**-> [Next: 6. Writing Tests](./6_unit_tests.md)**

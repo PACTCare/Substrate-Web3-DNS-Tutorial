@@ -9,7 +9,7 @@ This repository contains a [Substrate](https://github.com/paritytech/substrate) 
 3. [Interface](./tutorial/3_interface.md)
 4. [Runtime](./tutorial/4_runtime.md)
 5. [Testing](./tutorial/5_testing.md)
-6. [Writing Tests](./tutorial/6_tests.md)
+6. [Unit Tests](./tutorial/6_unit_tests.md)
 7. [UI](./tutorial/7_ui.md)
 8. [Next Steps](./tutorial/8_next_steps.md)
 
