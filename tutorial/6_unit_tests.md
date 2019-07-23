@@ -1,6 +1,7 @@
 # 6. Unit Tests
 
-In this section, we will start writing a very simple unit tests for our runtime. Keep in mind that if you ever want to release a runtime as part of an active blockchain, you want to do a lot more than just unit tests (e.g., integration, system tests, security audit, etc.). 
+In this section, we will start writing a very simple unit tests for our runtime. Keep in mind that if you ever want to release a runtime as part of an active blockchain, you want to do a lot more than just unit tests (e.g., integration, system tests, security audit, etc.).
+
 Luckily the template file also contains a basic test setup at the bottom of [template.rs file]( ../node/runtime/src/template.rs). At the beginning, inside mod tests, there are some imports which will help us to create a mock runtime. Here, we are going to add the “assert_noop” import after assert_ok. 
 The actual testing function is at the very end and should look like this:
 ```
@@ -54,7 +55,7 @@ fn create_metalog_works() {
     });
 }
 ```
-Keep in mind that the above function is just an example and neither tests all equivalence classes nor the interior as well as boundary values. Feel free to write additional tests as an exercise. 
+Be aware that the above function is just an example and neither tests all equivalence classes nor the interior as well as boundary values. Feel free to write additional tests as an exercise. 
 
 For the tests to past you'll also want to comment the following at the very end of the lib.rs file:
 ```
